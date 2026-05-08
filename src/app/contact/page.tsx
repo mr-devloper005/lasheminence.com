@@ -48,25 +48,7 @@ export default function ContactPage() {
               <p className="mt-2 text-sm leading-7 text-[#5c4a45]">{lane.body}</p>
             </div>
           ))}
-          <div className="flex items-start gap-3 rounded-2xl border border-dashed border-[#e0cfc9] bg-[#fffdfb] p-5">
-            <Mail className="mt-0.5 h-5 w-5 shrink-0 text-[#b76e79]" />
-            <div className="flex-1">
-              <p className="text-sm leading-relaxed text-[#5c4a45]">
-                Prefer email? Use the form—your message lands in the same inbox we monitor daily. Typical
-                replies within one to two business days.
-              </p>
-              <Button
-                asChild
-                className="mt-4 h-10 rounded-full bg-[#b76e79] text-white hover:bg-[#9e5e6a]"
-              >
-                <a href={`mailto:${contactEmail}`}>
-                  <Mail className="mr-2 h-4 w-4" />
-                  Email us directly
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
+                  </div>
 
         <div className="rounded-[1.75rem] border border-[#e8ddd4] bg-white/95 p-7 shadow-[0_24px_70px_rgba(183,110,121,0.08)] sm:p-9">
           <h2 className="text-xl font-semibold text-[#1a1614]">Send a message</h2>

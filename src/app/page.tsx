@@ -168,45 +168,7 @@ function DirectoryHome({
     <main className="bg-white">
       <DirectoryHero />
 
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className={`text-3xl font-bold tracking-tight sm:text-4xl ${tone.title}`}>Popular areas</h2>
-          <p className={`mx-auto mt-3 max-w-2xl text-sm sm:text-base ${tone.muted}`}>
-            Explore listings grouped by neighborhood vibe — dining, retail, wellness, and more.
-          </p>
-        </div>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {popularAreas.map((area) => (
-            <Link
-              key={area.title}
-              href="/listings"
-              className="group relative overflow-hidden rounded-3xl border border-zinc-200 shadow-md transition hover:-translate-y-0.5 hover:shadow-xl"
-            >
-              <div className="relative aspect-[16/10]">
-                <ContentImage src={area.src} alt="" fill className="object-cover transition duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
-              </div>
-              <div className="absolute bottom-0 left-0 flex w-full items-end justify-between gap-3 p-5">
-                <div className="flex items-center gap-3">
-                  <span className="h-10 w-1 rounded-full bg-[#ff2d55]" aria-hidden />
-                  <h3 className="text-xl font-bold text-white">{area.title}</h3>
-                </div>
-                <span className="rounded-full bg-[#ff2d55]/90 px-3 py-1 text-xs font-semibold text-white">{area.count} listings</span>
-              </div>
-            </Link>
-          ))}
-        </div>
-        <div className="mt-10 flex justify-center">
-          <Link
-            href="/listings"
-            className={`inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold ${tone.action}`}
-          >
-            View more areas
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </section>
-
+      
       <section className={`${tone.shell} border-y border-zinc-200/80`}>
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
