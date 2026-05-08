@@ -132,25 +132,7 @@ export function Navbar() {
               Search
             </Link>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger className={cn(navBtn, 'data-[state=open]:bg-zinc-100')}>
-                My hub
-                <ChevronDown className="h-3.5 w-3.5 opacity-70" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="center" className="min-w-[12rem]">
-                <DropdownMenuItem asChild>
-                  <Link href="/dashboard/listings">My listings</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/dashboard/saved">Saved</Link>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem asChild>
-                  <Link href="/settings">Account settings</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
+            
             <DropdownMenu>
               <DropdownMenuTrigger className={cn(navBtn, 'data-[state=open]:bg-zinc-100')}>
                 Company

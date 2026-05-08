@@ -106,10 +106,21 @@ export function TaskPostCard({
   const altText = `${post.title} ${category} ${variant === 'listing' ? 'business listing' : variant} image`
   const imageSizes = variant === 'article' ? '(max-width: 640px) 90vw, (max-width: 1024px) 48vw, 420px' : variant === 'image' ? '(max-width: 640px) 82vw, (max-width: 1024px) 34vw, 320px' : '(max-width: 640px) 85vw, (max-width: 1024px) 42vw, 340px'
 
-  const { recipe } = getFactoryState()
-  const isDirectoryProduct = recipe.homeLayout === 'listing-home' || recipe.homeLayout === 'classified-home'
+  // Get factory state once to ensure consistency
+  const factoryState = getFactoryState()
+  const isDirectoryProduct = factoryState.recipe.homeLayout === 'listing-home' || factoryState.recipe.homeLayout === 'classified-home'
   const isDirectorySurface = isDirectoryProduct && (variant === 'listing' || variant === 'classified' || variant === 'profile')
-  const ui = getDirectoryUiPreset()
+  
+  // Use a consistent UI preset to avoid hydration mismatches
+  const ui = {
+    cardFrame: 'group grid h-full overflow-hidden rounded-md border border-[#ff2d55]/12 bg-white shadow-[0_14px_36px_rgba(255,45,85,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_54px_rgba(255,45,85,0.14)]',
+    cardImage: 'aspect-[5/3]',
+    badge: 'bg-[#ff2d55] text-white',
+    chip: 'border border-[#ff2d55]/12 bg-[#fff5f5] text-[#ff2d55]',
+    title: 'text-[#1a1614]',
+    muted: 'text-[#5c4a45]',
+    eyebrow: 'text-[#ff2d55]',
+  }
 
   if (isDirectorySurface) {
     return (

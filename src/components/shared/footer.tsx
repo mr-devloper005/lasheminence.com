@@ -124,10 +124,7 @@ function ListingDirectoryFooter({ variant = 'default' }: { variant?: 'default' |
               <li>
                 <FootLink href="/about">About us</FootLink>
               </li>
-              <li>
-                <FootLink href="/help">How it works</FootLink>
-              </li>
-              <li>
+                            <li>
                 <FootLink href="/terms">Terms</FootLink>
               </li>
             </ul>
